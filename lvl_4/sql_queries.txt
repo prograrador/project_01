@@ -1,0 +1,15 @@
+CREATE TABLE Students
+(
+  Student_Id int NOT NULL PRIMARY KEY,
+  Student_Name varchar(80) NOT NULL,
+  School_Id int NOT NULL
+);
+
+INSERT INTO Students (Student_Id , Student_Name , School_Id)
+VALUES
+(201, 'Иван', 1),
+(202, 'Петр', 2),
+(203, 'Анастасия', 3),
+(204, 'Игорь', 4);
+
+SELECT Student_Id, Student_Name, School_Id, School_Name FROM Students NATURAL join School WHERE Student_Id=202;
